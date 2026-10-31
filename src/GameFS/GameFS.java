@@ -1,3 +1,4 @@
+package GameFS;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
@@ -5,6 +6,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Toolkit;
+
+
 
 public class GameFS {
 
