@@ -33,6 +33,8 @@ public class GameFS {
 
         wd.getContentPane().setBackground(Color.BLACK);
 
+        // Added The Quit Game Button! ->
+
         JButton CloseG = new JButton("Quit Game!");
 
         CloseG.setForeground(Color.YELLOW);
