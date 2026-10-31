@@ -1,5 +1,7 @@
 public class GameFS {
 
-    //This our first test does this work? :D
+   public static void main(String [] args ) {
 
+    System.out.println("HI THIS IS MY FIRST FS");
+   }
 }
