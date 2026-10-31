@@ -1,2 +1,2 @@
 # GameWindowV2.0
-This is my first project: I'm going to code my very own game in java, so this will probably take so long to make :D
+This is my first project: I'm going to code my very own game in Java, so this will probably take a long time to make :D
