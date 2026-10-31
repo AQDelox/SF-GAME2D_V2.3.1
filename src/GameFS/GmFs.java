@@ -1,0 +1,6 @@
+/**
+ * GmFs
+ */
+public class GmFs {
+
+}

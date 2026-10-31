@@ -7,6 +7,8 @@ import java.awt.Font;
 import java.awt.Toolkit;
 
 public class GameFS {
+
+    
    public static void main(String [] args ) {
 
         // Creating The FullScreen! ->
