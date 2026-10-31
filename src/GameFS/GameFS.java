@@ -24,7 +24,9 @@ public class GameFS {
 
         wd.setUndecorated(true);
 
-        wd.setLayout(null);
+        GamePanel gamePanel = new GamePanel();
+
+        gamePanel.setLayout(null);   
 
         wd.setPreferredSize(new Dimension(WinW, WinH));
 
@@ -33,7 +35,9 @@ public class GameFS {
         wd.setLocationRelativeTo(null);
         wd.setTitle("SF");
 
-        wd.getContentPane().setBackground(Color.BLACK);
+        
+
+        wd.add(gamePanel);
 
         // Added The Quit Game Button! ->
 
@@ -45,15 +49,19 @@ public class GameFS {
         CloseG.setBounds(WinW / 2, WinH / 2 , WinW / 7, WinH / 12);
         CloseG.setFocusPainted(false);
 
-        CloseG.setFont(new Font("?", Font.BOLD, 58));
+        CloseG.setFont(new Font("Arial", Font.BOLD, 58));
 
         CloseG.addActionListener(e -> {
 
             System.exit(0);
         });
 
-        wd.add(CloseG);
+        gamePanel.add(CloseG);
+
+        gamePanel.StartGameThread();
 
         wd.setVisible(true);
    }
+
+   
 }

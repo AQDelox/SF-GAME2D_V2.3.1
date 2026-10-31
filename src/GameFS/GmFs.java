@@ -1,6 +1,0 @@
-/**
- * GmFs
- */
-public class GmFs {
-
-}
