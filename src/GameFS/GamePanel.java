@@ -91,6 +91,8 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 
     public void update() {
 
+        if (GameFS.THEGAMEISRUNNING) {
+
         if (player.UPpressed) {
 
             player.playerY -= player.playerSpeed;
@@ -110,6 +112,8 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 
             player.playerX += player.playerSpeed;
         }
+
+    }
 
 
 

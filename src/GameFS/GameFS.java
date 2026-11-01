@@ -82,6 +82,7 @@ public class GameFS {
 
             gamePanel.remove(StartG);
             gamePanel.remove(CloseG);
+            
         });
 
         gamePanel.add(CloseG);
