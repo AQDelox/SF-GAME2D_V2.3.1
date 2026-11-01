@@ -12,8 +12,10 @@ public class Player {
 
     public int playerX = PlayerLocationX -500, playerY = PlayerLocationY -500;
 
-    public int playerSize = 64;
+    public int playerSize = 128;
 
     public int playerSpeed = 5;
+
+    
 
 }

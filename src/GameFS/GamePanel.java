@@ -6,12 +6,17 @@ import java.awt.event.KeyListener;
 
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
+import java.awt.Graphics2D;
+
+
 
 public class GamePanel extends JPanel implements Runnable, KeyListener{
 
     Thread gameThread;
 
     Player player = new Player();
+
+    Health hp = new Health();
 
     final int FPS = 120;
 
@@ -35,6 +40,8 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
         try {
 
              player.PlayerImg = ImageIO.read(getClass().getResourceAsStream("/resources/down1.png"));
+             hp.HeartImg = ImageIO.read(getClass().getResourceAsStream("/resources/heart.png"));
+             
             
         } catch (Exception e) {
             e.printStackTrace();
@@ -124,15 +131,36 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 
         super.paintComponent(g);
 
+        Graphics2D g2 = (Graphics2D) g;
+
+        g2.setRenderingHint(java.awt.RenderingHints.KEY_INTERPOLATION, java.awt.RenderingHints.VALUE_INTERPOLATION_NEAREST_NEIGHBOR);
+        g2.setRenderingHint(java.awt.RenderingHints.KEY_RENDERING, java.awt.RenderingHints.VALUE_RENDER_QUALITY);
+        
+
+
+
         
         if (GameFS.THEGAMEISRUNNING) {
 
-        g.setColor(Color.YELLOW);
+        g2.setColor(Color.YELLOW);
 
-        //g.drawImage(player.PlayerImg, player.playerX, player.playerY, player.playerSize, player.playerSize, null);
-        g.fillRect(player.playerX, player.playerY, player.playerSize, player.playerSize);
+        g2.drawImage(player.PlayerImg, player.playerX, player.playerY, player.playerSize, player.playerSize, null);
+        //g.fillRect(player.playerX, player.playerY, player.playerSize, player.playerSize);
+
+        g2.drawImage(hp.HeartImg, hp.heartX, hp.heartY, hp.heartSize, hp.heartSize, null);
 
         }
+
+       
+        // for The future Health System: ->:
+        /*for (int i = 0; i < hp.playerHealth; i++) {
+
+            
+
+            
+
+
+        }*/
 
         
         
