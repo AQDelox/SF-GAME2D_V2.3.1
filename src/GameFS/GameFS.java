@@ -9,7 +9,10 @@ import java.awt.Toolkit;
 
 
 
+
 public class GameFS {
+
+    public static boolean THEGAMEISRUNNING = false;
 
     
    public static void main(String [] args ) {
@@ -49,6 +52,8 @@ public class GameFS {
         CloseG.setForeground(Color.YELLOW);
         CloseG.setBackground(Color.pink);
 
+        CloseG.setFocusable(false);
+
         CloseG.setBounds(WinW / 2, WinH / 2 , WinW / 7, WinH / 12);
         CloseG.setFocusPainted(false);
 
@@ -59,7 +64,28 @@ public class GameFS {
             System.exit(0);
         });
 
+        JButton StartG = new JButton("Start a new Game!");
+
+        StartG.setForeground(Color.YELLOW);
+        StartG.setBackground(Color.pink);
+
+        StartG.setBounds(WinW / 2, WinH / 3 , WinW / 4, WinH / 14);
+        StartG.setFocusPainted(false);
+
+        StartG.setFocusable(false);
+
+        StartG.setFont(new Font("Arial", Font.BOLD, 58));
+
+        StartG.addActionListener(e -> {
+
+            THEGAMEISRUNNING = true;
+
+            gamePanel.remove(StartG);
+            gamePanel.remove(CloseG);
+        });
+
         gamePanel.add(CloseG);
+        gamePanel.add(StartG);
 
         gamePanel.StartGameThread();
 

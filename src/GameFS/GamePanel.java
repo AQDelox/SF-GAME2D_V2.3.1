@@ -120,10 +120,17 @@ public class GamePanel extends JPanel implements Runnable, KeyListener{
 
         super.paintComponent(g);
 
+        
+        if (GameFS.THEGAMEISRUNNING) {
+
         g.setColor(Color.YELLOW);
 
         //g.drawImage(player.PlayerImg, player.playerX, player.playerY, player.playerSize, player.playerSize, null);
         g.fillRect(player.playerX, player.playerY, player.playerSize, player.playerSize);
+
+        }
+
+        
         
 
        
